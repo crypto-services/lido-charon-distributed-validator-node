@@ -19,7 +19,7 @@ services:
       - ${NETHERMIND_PORT_HTTP:-8545}:8545 # JSON-RPC
       - ${NETHERMIND_PORT_ENGINE:-8551}:8551 # ENGINE-API
     command: |
-      --config=${ETH2_NETWORK:-mainnet}
+      --config=${NETWORK:-mainnet}
       --datadir=data
       --HealthChecks.Enabled=true
       --JsonRpc.Enabled=true
